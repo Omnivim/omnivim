@@ -1,0 +1,11 @@
+/Users/derekgou/omnivim/tauri-app/src-tauri/target/debug/deps/liblitemap-73f28d2faa76345e.rmeta: /Users/derekgou/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/litemap-0.7.5/src/lib.rs /Users/derekgou/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/litemap-0.7.5/src/map.rs /Users/derekgou/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/litemap-0.7.5/src/store/mod.rs /Users/derekgou/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/litemap-0.7.5/src/store/slice_impl.rs /Users/derekgou/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/litemap-0.7.5/src/store/vec_impl.rs
+
+/Users/derekgou/omnivim/tauri-app/src-tauri/target/debug/deps/liblitemap-73f28d2faa76345e.rlib: /Users/derekgou/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/litemap-0.7.5/src/lib.rs /Users/derekgou/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/litemap-0.7.5/src/map.rs /Users/derekgou/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/litemap-0.7.5/src/store/mod.rs /Users/derekgou/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/litemap-0.7.5/src/store/slice_impl.rs /Users/derekgou/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/litemap-0.7.5/src/store/vec_impl.rs
+
+/Users/derekgou/omnivim/tauri-app/src-tauri/target/debug/deps/litemap-73f28d2faa76345e.d: /Users/derekgou/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/litemap-0.7.5/src/lib.rs /Users/derekgou/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/litemap-0.7.5/src/map.rs /Users/derekgou/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/litemap-0.7.5/src/store/mod.rs /Users/derekgou/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/litemap-0.7.5/src/store/slice_impl.rs /Users/derekgou/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/litemap-0.7.5/src/store/vec_impl.rs
+
+/Users/derekgou/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/litemap-0.7.5/src/lib.rs:
+/Users/derekgou/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/litemap-0.7.5/src/map.rs:
+/Users/derekgou/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/litemap-0.7.5/src/store/mod.rs:
+/Users/derekgou/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/litemap-0.7.5/src/store/slice_impl.rs:
+/Users/derekgou/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/litemap-0.7.5/src/store/vec_impl.rs:
