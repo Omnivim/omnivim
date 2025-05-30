@@ -7,7 +7,7 @@
 #include <thread>
 #include <condition_variable>
 #include <vector>
-
+#include <map>
 HHOOK keyboardHook;
 std::set<DWORD> pressedKeys;
 bool gPressed = false;
@@ -95,7 +95,7 @@ LRESULT CALLBACK LowLevelKeyboardProc(int nCode, WPARAM wParam, LPARAM lParam) {
                 pressedKeys.insert(vkCode);
                 PrintPressedKeys();
             }
-            if (vkCode == 'g') {
+            if (vkCode == 'G') {
                 gPressed = true;
             }
             if (vkCode == VK_ESCAPE) {
@@ -103,24 +103,29 @@ LRESULT CALLBACK LowLevelKeyboardProc(int nCode, WPARAM wParam, LPARAM lParam) {
                 PostQuitMessage(0);
             }
 
-            if (vkCode == 'H' || vkCode == 'J' || vkCode == 'K' || vkCode == 'L') {
-                std::vector<WORD> keysToInject;
-                switch (vkCode) {
-                    case 'H': keysToInject.push_back(VK_LEFT); break;
-                    case 'J': keysToInject.push_back(VK_DOWN); break;
-                    case 'K': keysToInject.push_back(VK_UP); break;
-                    case 'L': keysToInject.push_back(VK_RIGHT); break;
-                    case 'W':
-                }
+            // Define a mapping from input keys to virtual key codes
+            std::map<WORD, std::vector<WORD>> keyMappings = {
+                {'H', {VK_LEFT}},
+                {'J', {VK_DOWN}},
+                {'K', {VK_UP}},
+                {'L', {VK_RIGHT}},
+                {'W', {VK_CONTROL, VK_RIGHT}},
+                {'B', {VK_CONTROL, VK_LEFT}},
+                {'E', {VK_CONTROL, VK_RIGHT}}, // Simplification
+                {'0', {VK_HOME}},
+                {'M', {VK_HOME}}, // Simplification
+                {'L', {VK_END}},
+            };
 
+            auto it = keyMappings.find(vkCode);
+            if (it != keyMappings.end()) {
                 {
                     std::lock_guard<std::mutex> lock(queueMutex);
-                    for (WORD key : keysToInject) {
+                    for (WORD key : it->second) {
                         injectionQueue.push(key);
                     }
                 }
                 queueCV.notify_one();
-
                 return 1; // suppress original key
             }
 
@@ -132,7 +137,7 @@ LRESULT CALLBACK LowLevelKeyboardProc(int nCode, WPARAM wParam, LPARAM lParam) {
                 pressedKeys.erase(vkCode);
                 PrintPressedKeys();
             }
-            if (vkCode == 'g') {
+            if (vkCode == 'G') {
                 gPressed = false;
             }
             return 1; // suppress keyup
